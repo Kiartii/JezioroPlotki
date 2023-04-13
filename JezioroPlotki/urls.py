@@ -27,6 +27,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('info/', views.info, name='info'),
+    path('obszar-natura-2000/', views.obszar_natura_2000, name='obszar-natura-2000'),
     path('hydrobiologia/', views.hydrobiologia, name='hydrobiologia'),
     path('hydrologia-jeziora/', views.hydrologia_jeziora, name='hydrologia-jeziora'),
     path('partnerzy/', views.partnerzy, name='partnerzy'),
