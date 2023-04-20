@@ -1,35 +1,4 @@
-.content {
+html {
     font-size: 24px;
-    color: #251B57;
-}
-
-.custom-bg-color {
-    background-color: #285218;
-    height: 90px;
-}
-
-.custom-bg-image {
-    background-image: url('/static/images/bg2.jpg');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    height: 110px;
-}
-
-
-.navelement {
-    font-size: 32px;
-    color: #B2C1CD;
-    background-color: #303A55;
-    border-radius: 35px;
-    padding: 11px;
-    text-decoration: none;
-    font-family: "Comic Sans MS";
-    font-style: italic;
-}
-
-.navelement:hover {
-    text-shadow: 0 0 2px #B77736, 0 0 6px #6F4924;
-    font-style: revert;
-    transition: .2s;
-    transform: revert;
+    color: red;
 }
