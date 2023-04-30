@@ -30,5 +30,6 @@ urlpatterns = [
     path('obszar-natura-2000/', views.obszar_natura_2000, name='obszar-natura-2000'),
     path('hydrobiologia/', views.hydrobiologia, name='hydrobiologia'),
     path('hydrologia-jeziora/', views.hydrologia_jeziora, name='hydrologia-jeziora'),
-    path('partnerzy/', views.partnerzy, name='partnerzy'),
+    path('galeria/', views.galeria
+         , name='galeria'),
 ]

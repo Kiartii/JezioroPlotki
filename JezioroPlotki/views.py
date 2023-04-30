@@ -10,5 +10,5 @@ def hydrobiologia(request):
     return render(request, 'hydrobiologia.html')
 def hydrologia_jeziora(request):
     return render(request, 'hydrologia-jeziora.html')
-def partnerzy(request):
-    return render(request, 'partnerzy.html')
+def galeria(request):
+    return render(request, 'galeria.html')
