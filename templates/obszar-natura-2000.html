@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+Obszar Natura 2000
     {% for article in articles %}
-        {% if article.category == 'Obszar Natura 2000' %}
+        {% if article.category == 'Obszar-Natura-2000' %}
             <div class="article_box">
             <h2>{{ article.title }}</h2>
             <img src="{{ article.image.url }}" alt="{{ article.title }}">

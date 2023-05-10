@@ -4,7 +4,7 @@
 hello world
 
     {% for article in articles %}
-        {% if article.category == 'Strona główna' %}
+        {% if article.category == 'Strona-Glowna' %}
             <div class="article_box">
             <h2>{{ article.title }}</h2>
             <img src="{{ article.image.url }}" alt="{{ article.title }}">

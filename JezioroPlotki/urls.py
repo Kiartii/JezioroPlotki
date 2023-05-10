@@ -26,12 +26,6 @@ handler404 = views.handler404_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
-
-from django.urls import path
-from . import views
-
-urlpatterns = [
     path('', views.index, name='index'),
     path('info/', views.info, name='info'),
     path('obszar-natura-2000/', views.obszar_natura_2000, name='obszar-natura-2000'),

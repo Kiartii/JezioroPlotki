@@ -3,7 +3,7 @@ from .models import Article
 
 
 def index(request):
-    articles = Article.objects.filter(category='Strona główna')
+    articles = Article.objects.filter(category='Strona-Glowna')
     context = {'articles': articles}
     return render(request, 'index.html', context)
 
@@ -15,19 +15,19 @@ def info(request):
 
 
 def obszar_natura_2000(request):
-    articles = Article.objects.filter(category='Obszar natura 2000')
+    articles = Article.objects.filter(category='Obszar-Natura-2000')
     context = {'articles': articles}
     return render(request, 'obszar-natura-2000.html', context)
 
 
 def hydrobiologia(request):
-    articles = Article.objects.filter(category='hydrobiologia')
+    articles = Article.objects.filter(category='Hydrobiologia')
     context = {'articles': articles}
     return render(request, 'hydrobiologia.html', context)
 
 
 def hydrologia_jeziora(request):
-    articles = Article.objects.filter(category='hydrologia jeziora')
+    articles = Article.objects.filter(category='Hydrologia-Jeziora')
     context = {'articles': articles}
     return render(request, 'hydrologia-jeziora.html', context)
 
