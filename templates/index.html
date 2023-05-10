@@ -3,4 +3,16 @@
 
 hello world
 
+    {% for article in articles %}
+        {% if article.category == 'Strona główna' %}
+            <div class="article_box">
+            <h2>{{ article.title }}</h2>
+            <img src="{{ article.image.url }}" alt="{{ article.title }}">
+            <p>{{ article.pub_date }}</p>
+
+            <p>{{ article.content }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+
 {% endblock %}

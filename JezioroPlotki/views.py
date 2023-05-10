@@ -1,14 +1,39 @@
 from django.shortcuts import render
+from .models import Article
+
 
 def index(request):
-    return render(request, 'index.html')
+    articles = Article.objects.filter(category='Strona główna')
+    context = {'articles': articles}
+    return render(request, 'index.html', context)
+
+
 def info(request):
-    return render(request, 'info.html')
+    articles = Article.objects.filter(category='Informacje')
+    context = {'articles': articles}
+    return render(request, 'info.html', context)
+
+
 def obszar_natura_2000(request):
-    return render(request, 'obszar-natura-2000.html')
+    articles = Article.objects.filter(category='Obszar natura 2000')
+    context = {'articles': articles}
+    return render(request, 'obszar-natura-2000.html', context)
+
+
 def hydrobiologia(request):
-    return render(request, 'hydrobiologia.html')
+    articles = Article.objects.filter(category='hydrobiologia')
+    context = {'articles': articles}
+    return render(request, 'hydrobiologia.html', context)
+
+
 def hydrologia_jeziora(request):
-    return render(request, 'hydrologia-jeziora.html')
+    articles = Article.objects.filter(category='hydrologia jeziora')
+    context = {'articles': articles}
+    return render(request, 'hydrologia-jeziora.html', context)
+
+
 def partnerzy(request):
     return render(request, 'partnerzy.html')
+
+def handler404_view(request, exception):
+    return render(request, '404.html', status=404)

@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
+    {% for article in articles %}
+        {% if article.category == 'Informacje' %}
+            <div class="article_box">
+            <h2>{{ article.title }}</h2>
+            <img src="{{ article.image.url }}" alt="{{ article.title }}">
+            <p>{{ article.pub_date }}</p>
+
+            <p>{{ article.content }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+
 Jezioro Płotki (Płocie) jest najważniejszym zbiornikiem rekreacyjnym północnej Wielkopolski. Wynika to nie tylko z usytuowania w obrębie granic
 największego miasta regionu - Piły, ale przede wszystkim jest konsekwencją wysokiej jakości i przezroczystości wody oraz posiadanej infrastruktury
 turystyczno-rekreacyjnej, która pełni istotną rolę dla wypoczynku mieszkańców Wielkopolski w promieniu przynajmniej 50km.

@@ -1,4 +1,12 @@
 html {
     font-size: 24px;
-    color: red;
+    color: grey;
+}
+
+.article_box {
+    max-width: 30%;
+}
+
+.article_box>img {
+    max-width: 100%;
 }
