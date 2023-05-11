@@ -32,6 +32,7 @@ urlpatterns = [
     path('hydrobiologia/', views.hydrobiologia, name='hydrobiologia'),
     path('hydrologia-jeziora/', views.hydrologia_jeziora, name='hydrologia-jeziora'),
     path('partnerzy/', views.partnerzy, name='partnerzy'),
+    path('galeria/', views.galeria , name='galeria'),
 ]
 
 if settings.DEBUG:

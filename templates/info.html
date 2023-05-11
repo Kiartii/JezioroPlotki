@@ -1,7 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
+        <header class="masthead">
+            <div class="container">
 
-    {% for article in articles %}
+                <div class="masthead-heading text-uppercase">Informacje</div>
+            </div>
+        </header>
+
+            <div id="blok">
+                <p>
+                    <b>Jezioro Płocie zwane także Płotki </b><br>
+                </p>
+
+                <img src="/static/images/ryc2.jpg" alt="Ryc. 2. Jezioro Płotki. Fot. Robert Judycki za Magazyn 67" height="30%" width="30%" style="float:left;">
+
+                <p id="akapit1">
+                    Jezioro Płotki jest najważniejszym zbiornikiem rekreacyjnym północnej Wielkopolski. Wynika to nie tylko z usytuowania w obrębie granic największego miasta regionu - Piły, ale przede wszystkim jest konsekwencją wysokiej jakości i przezroczystości wody oraz posiadanej infrastruktury turystyczno-rekreacyjnej, która pełni ważną rolę dla mieszkańców Wielkopolski w promieniu przynajmniej 50km.
+                </p>
+            </div>
+
+            <div id="blok">
+            <img src="/static/images/ryc3.png" alt="Ryc. 3. Pływająca na jeziorze Płotki baza rehabilitacji Nurkowej. Fot. Krok po Kroku HSA" height="30%" width="30%" style="float: right;">
+            <p id="akapit2">
+                Jezioro Płotki jest ponadto znanym na poziomie ogólnopolskim i już ponadkrajowym obiektem rekreacji, szkoleń i rehabilitacji nurkowej, posiadając jedyną na Świecie pływającą bazę rehabilitacji przez nurkowanie stowarzyszenia Krok po Kroku HSA oraz dwa inne centra nurkowe.
+            </p>
+
+           </div>
+        {% for article in articles %}
         {% if article.category == 'Informacje' %}
             <div class="article_box">
             <h2>{{ article.title }}</h2>
@@ -12,9 +37,4 @@
             </div>
         {% endif %}
     {% endfor %}
-
-Jezioro Płotki (Płocie) jest najważniejszym zbiornikiem rekreacyjnym północnej Wielkopolski. Wynika to nie tylko z usytuowania w obrębie granic
-największego miasta regionu - Piły, ale przede wszystkim jest konsekwencją wysokiej jakości i przezroczystości wody oraz posiadanej infrastruktury
-turystyczno-rekreacyjnej, która pełni istotną rolę dla wypoczynku mieszkańców Wielkopolski w promieniu przynajmniej 50km.
-
 {% endblock %}

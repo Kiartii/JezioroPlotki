@@ -1,16 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-Obszar Natura 2000
-    {% for article in articles %}
-        {% if article.category == 'Obszar-Natura-2000' %}
-            <div class="article_box">
-            <h2>{{ article.title }}</h2>
-            <img src="{{ article.image.url }}" alt="{{ article.title }}">
-            <p>{{ article.pub_date }}</p>
+    <header class="masthead">
+            <div class="container">
 
-            <p>{{ article.content }}</p>
+                <div class="masthead-heading text-uppercase">Obszar Natura 2000</div>
             </div>
-        {% endif %}
-    {% endfor %}
+    </header>
+
+    <div class="row text-center" id="blok">
+    <h2>Informacje o obszarze</h2>
+                <p>
+                   Obszar Natura 2000 obejmuje obszar jeziora Płotki i jego otoczenia. Ma on na celu ochronę siedlisk przyrodniczych oraz gatunków roślin i zwierząt, które występują na tym terenie.
+                </p>
+            </div>
+{% for article in articles %}
+    {% if article.category == 'Obszar-Natura-2000' %}
+        <div class="article_box">
+        <h2>{{ article.title }}</h2>
+        <img src="{{ article.image.url }}" alt="{{ article.title }}">
+        <p>{{ article.pub_date }}</p>
+        <p>{{ article.content }}</p>
+        </div>
+    {% endif %}
+{% endfor %}
 {% endblock %}
+
+

@@ -35,5 +35,10 @@ def hydrologia_jeziora(request):
 def partnerzy(request):
     return render(request, 'partnerzy.html')
 
+
 def handler404_view(request, exception):
     return render(request, '404.html', status=404)
+
+
+def galeria(request):
+    return render(request, 'galeria.html')
