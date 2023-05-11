@@ -30,7 +30,6 @@ class Article(models.Model):
         default='Index',
     )
 
-
     image = models.ImageField(upload_to='articles')
 
     def __str__(self):
