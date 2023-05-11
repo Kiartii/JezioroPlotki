@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from .models import Article
+from .models import Temperature
 
 
 def index(request):
     articles = Article.objects.filter(category='Strona-Glowna')
-    context = {'articles': articles}
+    temp = Temperature.objects.last()
+    context = {'articles': articles,
+               'temperature': temp}
     return render(request, 'index.html', context)
 
 

@@ -19,7 +19,7 @@
                     <h2 class="section-heading text-uppercase">Kamera</h2>
 
                 </div>
-
+    <span>ARTYKUŁY</span>
     {% for article in articles %}
         {% if article.category == 'Strona-Glowna' %}
             <div class="article_box">
@@ -31,5 +31,8 @@
             </div>
         {% endif %}
     {% endfor %}
-
+    <span>TEMPERATURA</span>
+    <div class="temp_box">
+    <p>{{ temperature.temperature }}</p>
+    </div>
 {% endblock %}

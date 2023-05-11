@@ -35,5 +35,12 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-# article = Article(title='Zarybianie jeziora',content='W zeszłym tygodniu przeprowadziliśmy zarybianie jeziora rybami z gatunku sandacza i szczupaka. Liczymy, że w ciągu kilku lat populacja ryb w jeziorze znacznie się zwiększy.',pub_date='2022-05-01 10:30:00',image='HydrobiologyPage_1.jpg',category='hydrobiologia')
-# article.save()
+
+class Temperature(models.Model):
+    temperature = models.DecimalField(max_digits=3, decimal_places=1)
+    edit_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        p =  str(self.edit_date.strftime('%Y-%m-%d %H:%M'))
+        l = str(self.temperature)
+        return (p+" ; "+l+"\N{DEGREE SIGN}C")
