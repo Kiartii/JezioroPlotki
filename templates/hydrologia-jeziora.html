@@ -48,6 +48,8 @@
         </p>
     </div>
 
+    <h1>ARTYKUŁY</h1>
+    <div class="articles">
         {% for article in articles %}
         {% if article.category == 'Hydrologia-Jeziora' %}
             <div class="article_box">
@@ -56,9 +58,9 @@
             <p>{{ article.pub_date }}</p>
 
             <p>{{ article.content }}</p>
-            <a href="{% url 'article_details' article_id=article.id %}">Przejdź do artykułu</a>
+            <a href="{% url 'article_details' article_id=article.id %}">Czytaj dalej</a>
             </div>
         {% endif %}
     {% endfor %}
-
+    </div>
 {% endblock %}
