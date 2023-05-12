@@ -22,7 +22,7 @@
             <h2>{{ article.title }}</h2>
             <img src="{{ article.image.url }}" alt="{{ article.title }}">
             <p>{{ article.pub_date }}</p>
-            <p>{{ article.content }}</p>
+            <span>{{ article.content | safe }}</span>
             <a href="{% url 'article_details' article_id=article.id %}">Czytaj dalej</a>
             </div>
         {% endif %}

@@ -219,10 +219,16 @@ header.masthead {
   display: flex;
 }
 
-.article_box>p {
-    font-size: 16px;
-    max-height: 50px;
+.article_box>span{
     overflow: hidden;
+    height: 50px;
+    display: block;
+}
+.article_box>p,
+.article_box>span>p {
+    font-size: 16px;
+    padding: 0px 4px;
+    margin: 2px auto;
 }
 .article_box>* {
     width: 100%;
@@ -233,7 +239,13 @@ header.masthead {
     margin: 16px 4px;
     padding: 4px;
     box-sizing: border-box;
-    transition: 0.3s;
+    transition: 0.3s;display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.article_box>img {
+    height: 160px;
 }
 
 .article_box>a{

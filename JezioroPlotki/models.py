@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class Link(models.Model):
@@ -14,7 +15,7 @@ class Link(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
-    content = models.TextField(max_length=1024)
+    content = RichTextField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now_add=True)
     categoryChoices = (
         ('Strona-Glowna', 'Strona Główna'),
@@ -41,6 +42,6 @@ class Temperature(models.Model):
     edit_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        p =  str(self.edit_date.strftime('%Y-%m-%d %H:%M'))
+        p = str(self.edit_date.strftime('%Y-%m-%d %H:%M'))
         l = str(self.temperature)
-        return (p+" ; "+l+"\N{DEGREE SIGN}C")
+        return (p + " ; " + l + "\N{DEGREE SIGN}C")
