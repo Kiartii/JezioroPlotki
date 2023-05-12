@@ -9,15 +9,12 @@
                 </div>
             </div>
         </header>
-        <span>Data upublikowania: {{ article.pub_date }}</span>
-        <div id="blok">
-            <p>
-                <b></b><br>
-            </p>
+        <div class="article_date">Data upublikowania: {{ article.pub_date }}</div>
+        <div class="article_block">
             <img src="{{ article.image.url }}" alt="{{ article.title }}">
         </div>
 
-        <div class="content">
+        <div class="article_content">
             <p>{{ article.content }}</p>
         </div>
 

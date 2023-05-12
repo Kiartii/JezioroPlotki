@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <header class="masthead">
+        <div class="container">
+
+            <div class="masthead-heading text-uppercase">Temperatury</div>
+        </div>
+    </header>
+
+    <div id="blok">
+        <table class="temperatures">
+            <thead>
+                <tr>
+{#                    <th>ID</th>#}
+                    <th>Temperatura</th>
+                    <th>Data pomiaru</th>
+                </tr>
+            </thead>
+            {% for temp in temps %}
+                <tr>
+{#                <td>{{ temp.id }}</td>#}
+                <td>{{ temp.temperature }}</td>
+                <td>{{ temp.edit_date }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

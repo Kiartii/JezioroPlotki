@@ -49,3 +49,8 @@ def galeria(request):
 def article_details(request, article_id):
     article = get_object_or_404(Article, pk=article_id)
     return render(request, 'article_details.html', {'article': article})
+
+def temp(request):
+    temps = Temperature.objects.order_by("id").reverse()
+    context = {'temps': temps}
+    return render(request, 'Temperatury.html', context)

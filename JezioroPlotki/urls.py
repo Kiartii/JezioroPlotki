@@ -34,8 +34,8 @@ urlpatterns = [
     path('hydrologia-jeziora/', views.hydrologia_jeziora, name='hydrologia-jeziora'),
     path('partnerzy/', views.partnerzy, name='partnerzy'),
     path('galeria/', views.galeria , name='galeria'),
-    path('artykul/<int:article_id>/', article_details, name='article_details'),
-
+    path('temperatura/', views.temp, name='temperatura'),
+    path('artykul/<int:article_id>/', views.article_details, name='article_details'),
 ]
 
 if settings.DEBUG:

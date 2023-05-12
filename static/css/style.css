@@ -249,3 +249,53 @@ header.masthead {
 .article_box>a:hover {
   color: aqua;
 }
+
+.article_block>img {
+    width: 100%;
+}
+
+.article_block {
+    width: 80%;
+    margin: 16px auto;
+}
+
+.article_content {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.article_date {
+  margin: 8px 0px 0px 8px;
+}
+
+table.temperatures {
+    margin: 32px auto 0px;
+    width: 360px;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table.temperatures thead tr {
+    background-color: #212529;
+    color: #ffffff;
+    text-align: left;
+}
+
+table.temperatures th,
+table.temperatures td {
+    padding: 8px 12px;
+  text-align: center;
+}
+
+table.temperatures tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table.temperatures tbody tr:nth-of-type(even) {
+    background-color: #21252920;
+}
+
+table.temperatures tbody tr:last-of-type {
+    border-bottom: 2px solid #212529;
+}
