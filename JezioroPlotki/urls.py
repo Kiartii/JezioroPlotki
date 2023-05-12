@@ -21,6 +21,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+from .views import article_details
 
 handler404 = views.handler404_view
 
@@ -33,6 +34,8 @@ urlpatterns = [
     path('hydrologia-jeziora/', views.hydrologia_jeziora, name='hydrologia-jeziora'),
     path('partnerzy/', views.partnerzy, name='partnerzy'),
     path('galeria/', views.galeria , name='galeria'),
+    path('artykul/<int:article_id>/', article_details, name='article_details'),
+
 ]
 
 if settings.DEBUG:

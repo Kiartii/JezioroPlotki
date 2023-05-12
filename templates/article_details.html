@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <header class="masthead">
+            <div class="container">
+
+                <div class="masthead-heading text-uppercase">
+                    {{ article.title }}
+                </div>
+            </div>
+        </header>
+        <span>Data upublikowania: {{ article.pub_date }}</span>
+        <div id="blok">
+            <p>
+                <b></b><br>
+            </p>
+            <img src="{{ article.image.url }}" alt="{{ article.title }}">
+        </div>
+
+        <div class="content">
+            <p>{{ article.content }}</p>
+        </div>
+
+
+{% endblock %}

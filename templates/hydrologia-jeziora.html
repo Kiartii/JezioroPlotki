@@ -56,6 +56,7 @@
             <p>{{ article.pub_date }}</p>
 
             <p>{{ article.content }}</p>
+            <a href="{% url 'article_details' article_id=article.id %}">Przejdź do artykułu</a>
             </div>
         {% endif %}
     {% endfor %}

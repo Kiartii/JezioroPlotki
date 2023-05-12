@@ -27,14 +27,15 @@
 
            </div>
         {% for article in articles %}
-        {% if article.category == 'Informacje' %}
-            <div class="article_box">
-            <h2>{{ article.title }}</h2>
-            <img src="{{ article.image.url }}" alt="{{ article.title }}">
-            <p>{{ article.pub_date }}</p>
+            {% if article.category == 'Informacje' %}
+                <div class="article_box">
+                <h2>{{ article.title }}</h2>
+                <img src="{{ article.image.url }}" alt="{{ article.title }}">
+                <p>{{ article.pub_date }}</p>
 
-            <p>{{ article.content }}</p>
-            </div>
-        {% endif %}
-    {% endfor %}
+                <p>{{ article.content }}</p>
+                <a href="{% url 'article_details' article_id=article.id %}">Przejdź do artykułu</a>
+                </div>
+            {% endif %}
+        {% endfor %}
 {% endblock %}

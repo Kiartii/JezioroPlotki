@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Article
 from .models import Temperature
 
@@ -45,3 +45,7 @@ def handler404_view(request, exception):
 
 def galeria(request):
     return render(request, 'galeria.html')
+
+def article_details(request, article_id):
+    article = get_object_or_404(Article, pk=article_id)
+    return render(request, 'article_details.html', {'article': article})
