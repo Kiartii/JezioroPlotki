@@ -16,25 +16,30 @@ body {
 #navbarResponsive{
   margin-left: 100px;
 }
-h2,h1{
+h2{
   text-align: center;
+}
+h1{
+  text-align: center;
+  padding-top: 30px;
 }
 
-#akapit1{
+#paragraph1{
   padding-left: 34%;
+  padding-top:3vw;
   text-align: center;
-  padding-top: 5%;
+
 }
-#akapit2{
+#paragraph2{
   padding-right: 34%;
-  padding-top: 5%;
+  padding-top: 3vw;
   text-align: center;
 }
 p{
   font-size: 150%;
 }
 footer{
-  height: auto;
+  height: 100px;
   width: 100%;
   text-align: center;
   padding-bottom: 20px;
@@ -215,8 +220,14 @@ header.masthead {
   letter-spacing: 0.0625em;
 }
 
+.temp_box{
+  text-align: center;
+  align-items: center;
+}
+
 .articles{
   display: flex;
+  justify-content: center;
 }
 
 .article_box>span{
